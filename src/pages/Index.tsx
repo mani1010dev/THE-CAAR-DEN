@@ -6,6 +6,7 @@ import CarResaleSection from "@/components/CarResaleSection";
 import RestorationSection from "@/components/RestorationSection";
 import GallerySection from "@/components/GallerySection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import InstagramSection from "@/components/InstagramSection";
 import BuildYourShine from "@/components/BuildYourShine";
 import BookingSection from "@/components/BookingSection";
 import ContactSection from "@/components/ContactSection";
@@ -23,6 +24,7 @@ const Index = () => (
     <RestorationSection />
     <GallerySection />
     <TestimonialsSection />
+    <InstagramSection />
     <BookingSection />
     <ContactSection />
     <Footer />

@@ -9,7 +9,22 @@ const BookingSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Booking request sent! We'll contact you shortly.");
+    
+    const message = `Hi The Caar Den! I'd like to book a service.
+    
+*Details:*
+- *Name:* ${form.name}
+- *Phone:* ${form.phone}
+- *Service:* ${form.service}
+- *Car:* ${form.car || 'Not specified'}
+- *Message:* ${form.message || 'No additional details'}
+
+Looking forward to hearing from you!`;
+
+    const whatsappUrl = `https://wa.me/917538863909?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
+    
+    toast.success("Opening WhatsApp for booking...");
     setForm({ name: "", phone: "", service: "", car: "", message: "" });
   };
 
@@ -48,13 +63,14 @@ const BookingSection = () => {
               required
               className="flex h-10 w-full rounded-md border border-border bg-secondary px-3 py-2 text-sm font-body text-foreground ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
-              <option value="" className="text-muted-foreground">Select Service</option>
-              <option value="wash">Car Wash</option>
-              <option value="polish">Polish & Wax</option>
-              <option value="ceramic">Ceramic Coating</option>
-              <option value="body">Body Works</option>
-              <option value="interior">Interior Detailing</option>
-              <option value="sales">Car Sales Inquiry</option>
+              <option value="" className="text-muted-foreground text-silver-60">Select Service</option>
+              <option value="Wash">Wash</option>
+              <option value="Polish">Polish</option>
+              <option value="Wax Coating">Wax Coating</option>
+              <option value="Body Works">Body Works</option>
+              <option value="Restoration">Restoration</option>
+              <option value="Accessories">Accessories</option>
+              <option value="Car Resale Inquiry">Car Resale Inquiry</option>
             </select>
             <Input
               placeholder="Car Model"

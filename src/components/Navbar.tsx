@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { label: "Services", href: "#services" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Cars", href: "#cars" },
+  { label: "Car Resale", href: "#cars" },
   { label: "Restoration", href: "#restoration" },
+  { label: "Gallery", href: "#gallery" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -54,11 +54,7 @@ const Navbar = () => {
             <Phone className="w-4 h-4" />
             <span>075388 63909</span>
           </a>
-          <a 
-            href="https://wa.me/917538863909?text=Hi%20The%20Caar%20Den%2C%20I'd%20like%20to%20book%20a%20service%20for%20my%20vehicle." 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
+          <a href="#booking">
             <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-body text-sm font-semibold tracking-wide">
               Book Now
             </Button>
@@ -86,12 +82,7 @@ const Navbar = () => {
                 {l.label}
               </a>
             ))}
-            <a 
-              href="https://wa.me/917538863909?text=Hi%20The%20Caar%20Den%2C%20I'd%20like%20to%20book%20a%20service%20for%20my%20vehicle." 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              onClick={() => setMobileOpen(false)}
-            >
+            <a href="#booking" onClick={() => setMobileOpen(false)}>
               <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-body text-sm font-semibold mt-2">
                 Book Now
               </Button>
