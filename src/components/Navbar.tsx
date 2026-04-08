@@ -31,7 +31,7 @@ const Navbar = () => {
       <div className="container-luxury flex items-center justify-between h-16 sm:h-20 px-4 sm:px-6 lg:px-8">
         <a href="#" className="flex items-center gap-3">
           <img src="/logo.png" alt="The Caar Den Logo" className="h-8 sm:h-10 w-auto object-contain" />
-          <div className="font-display text-lg font-bold tracking-wider leading-tight hidden sm:block">
+          <div className="font-display text-base sm:text-lg font-bold tracking-wider leading-tight">
             <span className="text-foreground">THE CAAR </span>
             <span className="text-destructive font-black">DEN.</span>
           </div>

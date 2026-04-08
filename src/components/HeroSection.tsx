@@ -3,7 +3,7 @@ import heroCarImage from "@/assets/hero-car.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[85vh] sm:min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-0 pt-20 pb-10 sm:pt-0 sm:pb-0 sm:min-h-screen flex items-start sm:items-center overflow-hidden">
       <div className="absolute inset-0">
         <img
           src={heroCarImage}
@@ -19,7 +19,7 @@ const HeroSection = () => {
       <div className="absolute top-1/4 right-1/4 w-96 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent animate-pulse-glow" />
       <div className="absolute top-1/3 right-1/3 w-64 h-px bg-gradient-to-r from-transparent via-brand-red/30 to-transparent animate-pulse-glow" style={{ animationDelay: "1s" }} />
 
-      <div className="relative z-10 container-luxury px-4 sm:px-6 lg:px-8 pt-12 sm:pt-20">
+      <div className="relative z-10 container-luxury px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
           <div className="flex items-center gap-3 mb-6 animate-fade-in group pointer-events-none">
             <img src="/logo.png" alt="The Caar Den Logo" className="h-10 sm:h-12 w-auto object-contain" />
